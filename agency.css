@@ -1,0 +1,126 @@
+.head-wheat {
+    padding: 30px 100px 50px 100px;
+    height: auto;
+    background-color: rgb(245, 240, 233);   
+}
+
+.after-head {
+    padding: 0px 100px 50px 100px;
+    background-color: white;
+    height: auto;
+}
+
+ul {
+  height: 100px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a {
+  height: 100%;
+  width: 100%;
+}
+
+li a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  height: 100px;
+  width: auto;
+  margin: 0;
+  /* растянуть весь текст на всю высоту ul */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 73, 73);
+}
+
+.active {
+  height: 100px;
+  width: auto;
+  margin: 0;
+  /* растянуть весь текст на всю высоту ul */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 73, 73);
+}
+
+.parent {
+    display: flex;
+    flex-direction:row;
+}
+  
+.column {
+    border: solid;
+    flex: 1 1 0px;
+}
+
+.btn-head {
+    width: 150px;
+    height: 30px;
+    border: none;
+    background-color: rgb(255, 73, 73);
+    color: white;
+    border-radius: 4px;
+}
+
+.btn-after-head {
+  width: 150px;
+  height: 30px;
+  border-color: rgb(255, 73, 73);
+  background-color: white;
+  color: rgb(255, 73, 73);
+  border-radius: 4px;
+}
+
+.span-after-head {
+  color: rgb(58, 58, 58)
+}
+
+.pic-container {
+  display: block;
+  text-align: center;
+}
+
+.pic1 {
+  width: 20%;
+  margin: 5px;
+}
+
+.heads {  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 299px 301px;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "big text"
+    "big imgs";
+}
+
+.imgs { grid-area: imgs; }
+
+.text { grid-area: text; }
+
+.big { grid-area: big; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel {
+  width: 100%;
+  height: 500px;
+  padding-top: 50px;
+  background-image: url('2.jpg');
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
