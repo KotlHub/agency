@@ -60,7 +60,7 @@ li a:hover {
 }
   
 .column {
-    border: solid;
+    /* border: solid; */
     flex: 1 1 0px;
 }
 
@@ -123,4 +123,42 @@ li a:hover {
   background-image: url('2.jpg');
   background-repeat: no-repeat; 
   background-size: cover;
+}
+
+.footer {
+  height: 100px;
+  padding-left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background-color: #333;
+}
+
+.footer-span {
+  color: white;
+  font-size: 15px;
+}
+
+.go-up, .go-down
+{
+    display: none;
+    position: fixed;
+    cursor: pointer;
+    z-index: 999;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    font-size: 30pt;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background: var(--color-orange);
+    border-radius: 50px;
+}
+.go-up   { bottom: 75px; }
+.go-down { bottom: 15px; }
+.go-down:hover, .go-up:hover 
+{
+    background: rgb(255, 224, 203);
+    color: var(--color-orange);
 }

@@ -2,7 +2,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="agency.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
 <body>
     <div id="first" class="head-wheat">
@@ -47,7 +47,7 @@
             </div>
             <div class="column" style="padding-top: 50px;">
                 <div class="parent">
-                    <div class="column">
+                    <div class="column" style="padding-right: 20px;">
                         <span class="span-after-head" style="font-size: 22px">Management</span><br><br>
                         <span class="span-after-head">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
                     </div>
@@ -57,7 +57,7 @@
                     </div>
                 </div>
                 <div class="parent" style="margin-top: 20px;">
-                    <div class="column">
+                    <div class="column" style="padding-right: 20px;">
                         <span class="span-after-head" style="font-size: 22px">Logo / Branding</span><br><br>
                         <span class="span-after-head">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
                     </div>
@@ -73,12 +73,12 @@
             <div class="column" style="text-align: center;">
                 <span class="span-after-head" style="font-size: 50px">FEATURE PRODUCTS</span><br><br>
                 <span class="span-after-head">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</span><br><br>
-                <hr color="red" width="100px" noshade="true">
+                <hr>
             </div>
         </div>
         <div class="parent" style="margin-top: 50px; margin-bottom: 50px;">
             <div class="column" style="text-align: center;">
-                <span class="span-after-head" style="font-size: 30px">ALL</span>
+                <span class="span-after-head" style="font-size: 30px; color:blue">ALL</span>
             </div>
             <div class="column" style="text-align: center;">
                 <span class="span-after-head" style="font-size: 30px">PRINT TEMPLATE</span>
@@ -109,7 +109,7 @@
             <div class="column" style="text-align: left;">
                 <span class="span-after-head" style="font-size: 50px">MEET OUR TEAM</span><br><br>
                 <span class="span-after-head">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</span><br><br>
-                <hr color="red" width="100px" noshade="true" style="margin: 0">
+                <hr>
             </div>
         </div>
         <div class="heads" style="margin-top: 30px">
@@ -126,7 +126,7 @@
                 <span class="span-after-head">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</span>
                 <div class="parent" style="margin-top: 50px; margin-right: 50px;">
                     <div class="column" style="text-align: center;">
-                        <i class="span-after-head" style="font-size: 15px">Facebook</i>
+                        <i class="span-after-head" style="font-size: 15px;">Facebook</i>
                     </div>
                     <div class="column" style="text-align: center;">
                         <i class="span-after-head" style="font-size: 15px">Dribble</i>
@@ -152,23 +152,33 @@
             <span style="font-size: 20px; color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</span><br><br>
         </div>
         <div style="text-align: center; margin-top: 30px;">
-            <div class="parent" style="margin-top: 50px;">
-                <div class="column" style="text-align: left;">
-                    <input type="text" class="form-control" placeholder="Text input">
-                </div>
-                <div class="column" style="text-align: left;">
-                    <button type="button" class="btn btn-danger btn-lg">SUBSCRIBE</button>
-                </div>
-            </div>
+            <button type="button" class="btn btn-danger btn-lg">SUBSCRIBE</button>
         </div>
     </div>
     <div class="after-head">
         <div class="parent" style="margin-top: 50px;">
             <div class="column" style="text-align: left;">
-                <span class="span-after-head" style="font-size: 50px">MEET OUR TEAM</span><br><br>
+                <span class="span-after-head" style="font-size: 50px">GET IN TOUCH</span><br><br>
                 <span class="span-after-head">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</span><br><br>
-                <hr color="red" width="100px" noshade="true" style="margin: 0">
+                <hr>
             </div>
         </div>
+    </div>
+    <div class="go-up" title="Up" id='ToTop'>⇧</div>
+    <div class="go-down" title="Down" id='OnBottom'>⇩</div>
+
+
+    <script>
+        jQuery(document).ready(function() {
+        jQuery("a.scrollto").click(function () {
+        elementClick = jQuery(this).attr("href")
+        destination = jQuery(elementClick).offset().top;
+        jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 1100);
+        return false;
+        });
+        });
+    </script>
+    <div class="footer">
+        <span class="footer-span">Since 2016 Lorem ipsum</span>
     </div>
 </body>
